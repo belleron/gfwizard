@@ -240,6 +240,10 @@ function writeConfig() {
 	echo "#!/usr/bin/env bash" > $CONFIG_FILE
 	echo "strGitLabKey=\"${strGitLabKey}\"" >> $CONFIG_FILE
 	echo "strPushOnCommitDefault=\"${strPushOnCommitDefault}\"" >> $CONFIG_FILE
+	echo "# ************" >> $CONFIG_FILE
+	echo "# Static Lines" >> $CONFIG_FILE
+	echo "# ************" >> $CONFIG_FILE
+	echo "strGFWizardRepo=\"${strGFWizardRepo}\"" >> $CONFIG_FILE
 }
 
 function doPreFinishCheck() {

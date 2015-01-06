@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-strGFWizardRepo="https://github.com/belleron/gfwizard.git"
+strGFWizardRepo="https://github.com/belleron/git-flow-wizard.git"
 strGitLabKey=""
 strPushOnCommitDefault="Y"

@@ -2,7 +2,7 @@
 <?php
 require_once realpath ( __DIR__ . '/gitlab/vendor/autoload.php' );
 if (count($argv) < 2 || $argv[1]=='-h' ) {
-	echo "Usage: sp-gitlab.php <token> <command>".PHP_EOL;
+	echo "Usage: gf-gitlab.php <token> <command>".PHP_EOL;
 	echo "create <group> <repo>".PHP_EOL;
 	exit(1);
 } else {
