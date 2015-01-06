@@ -1,9 +1,13 @@
 # Git Flow wizard
-This script utilizes the git flow for staging and implementation for WebDev team
+This script utilizes the git flow mthodology and provides easy text based wizard for developers (Bash).
+* For some features PHP-CLI is required
 
-## The MIT License (MIT)
+#### Versioning
+The version numbering used here and utilized by the wizard is {major}.{minor}.{hotfix}.{build}
 
-### Copyright (c) 2015 BelleRon Technology
+#### The MIT License (MIT)
+
+*Copyright (c) 2015 BelleRon Technology*
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,8 +28,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## Versioning
-The version numbering used here and utilized by the wizard is {major}.{minor}.{hotfix}.{build}
 
 ## Change Log
 
