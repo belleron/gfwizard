@@ -7,7 +7,7 @@ source gf-git-constants.sh
 source gf-git-functions.sh
 
 readonly IS_DEBUG=false
-readonly GFWIZARD_REPO="git@gitlab.spiralsolutions.co.il:devops/gfwizard.git"
+readonly GFWIZARD_REPO="https://github.com/belleron/gfwizard.git"
 
 script=$(readlink -f "${BASH_SOURCE[0]}")
 
