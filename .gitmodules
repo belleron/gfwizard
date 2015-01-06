@@ -1,0 +1,6 @@
+[submodule "gitflow"]
+	path = gitflow
+	url = https://github.com/nvie/gitflow.git
+[submodule "gitlab"]
+	path = gitlab
+	url = https://github.com/belleron/php-gitlab-api.git

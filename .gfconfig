@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+strGitLabKey="Svb7p1zKfbtwBfD3FX79"
+strPushOnCommitDefault="Y"
