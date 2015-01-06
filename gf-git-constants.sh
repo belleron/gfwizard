@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Constants for use in GIT FLOW wizard
 # Author: Alex Sherman <alexs@spiralsolutions.com>
@@ -8,8 +8,8 @@ readonly MENU_EXIT=0
 readonly MENU_UP=0
 readonly MENU_REMOTE=99
 
-readonly CONFIG_FILE="$( dirname "${BASH_SOURCE[0]}" )""/.spconfig"
-readonly GITLAB_EXEC="$( dirname "${BASH_SOURCE[0]}" )""/sp-gitlab.php"
+readonly CONFIG_FILE="$( dirname "${BASH_SOURCE[0]}" )""/.gfconfig"
+readonly GITLAB_EXEC="$( dirname "${BASH_SOURCE[0]}" )""/gf-gitlab.php"
 
 #Regex for valid tags
 readonly strTagRegex="^feature\|hotfix\|release\|v[0-9]\{1,2\}\.[0-9]\+\.[0-9]\+$"

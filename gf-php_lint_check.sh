@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 script_folder=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source $script_folder"/sp-git-functions.sh"
+source $script_folder"/gf-git-functions.sh"
 
 boolResultOk=true
 

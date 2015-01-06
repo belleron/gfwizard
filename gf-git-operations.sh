@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Functions for operations in use at GIT FLOW wizard
 # Author: Alex Sherman <alexs@spiralsolutions.com>

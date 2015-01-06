@@ -1,33 +1,35 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Install/Update script for Git Wizard
-# Author: Alex Sherman <alexs@spiralsolutions.com>
+# Author: Alex Sherman <alex@belleron.com>
 #
-source sp-colors.sh
-source sp-git-constants.sh
-source sp-git-functions.sh
+source gf-colors.sh
+source gf-git-constants.sh
+source gf-git-functions.sh
 
 readonly IS_DEBUG=false
+readonly GFWIZARD_REPO="git@gitlab.spiralsolutions.co.il:devops/gfwizard.git"
+
 script=$(readlink -f "${BASH_SOURCE[0]}")
 
 strCurrentDir=$(pwd)
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-print_info "SP-GitFlow" "Checking for updates..."
+print_info "GF-GitFlow" "Checking for updates..."
 git pull
 git submodule update --init --recursive
-strAlias=$(grep -s 'sp.sh' $HOME/.bashrc)
+strAlias=$(grep -s 'gf.sh' $HOME/.bashrc)
 if [ -z "$strAlias" ]; then
 	print_info "Command alias" "Setting..."
-	alias sp='sp.sh'
-	echo  "alias sp='sp.sh'" >> $HOME/.bashrc
+	alias gf='gf.sh'
+	echo  "alias gf='gf.sh'" >> $HOME/.bashrc
 fi
 # Set origin...
-git config remote.origin.url git@gitlab.spiralsolutions.co.il:devops/sp-gitflow.git
+git config remote.origin.url $GFWIZARD_REPO
 
 #Composer update for GitLab
 cd gitlab
 
-git config --unset sp.cleantags
-git config --add sp.cleantags false
+git config --unset gf.cleantags
+git config --add gf.cleantags false
 
 ../composer update
 cd ..
@@ -36,7 +38,7 @@ cd ..
 doFlowConfig false
 
 #Add to cronjob
-strCronTag="# SP-INSTALL"
+strCronTag="# GF-INSTALL"
 
 crontab -l 2>/dev/null | grep -x "$strCronTag" >/dev/null 2>/dev/null
 

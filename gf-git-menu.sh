@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Menu Functions of GIT FLOW wizard
-# Author: Alex Sherman <alexs@spiralsolutions.com>
+# Author: Alex Sherman <alex@belleron.com>
 #
 
 # Show main menu

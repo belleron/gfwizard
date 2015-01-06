@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Reset
 readonly Color_Off='\e[0m'       # Text Reset
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Functions for use in GIT FLOW wizard
-# Author: Alex Sherman <alexs@spiralsolutions.com>
+# Author: Alex Sherman <alex@belleron.com>
 #
 
 # Initialize global vars
