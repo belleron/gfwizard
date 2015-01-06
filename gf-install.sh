@@ -31,7 +31,7 @@ cd gitlab
 git config --unset gf.cleantags
 git config --add gf.cleantags false
 
-../composer update
+php ../composer.phar update
 cd ..
 
 
