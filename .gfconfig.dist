@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+strGFWizardRepo="https://github.com/belleron/git-flow-wizard.git"
+strGitLabKey=""
+strPushOnCommitDefault="Y"
+export GF_GITLAB_DOMAIN="gitlab.example.com"
+export GF_GITLAB_PROTOCOL="http"
