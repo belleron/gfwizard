@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Constants for use in GIT FLOW wizard
-# Author: Alex Sherman <alexs@spiralsolutions.com>
+# Author: Alex Sherman <alex@belleron.com>
 #
 # Menu related
 readonly MENU_EXIT=0

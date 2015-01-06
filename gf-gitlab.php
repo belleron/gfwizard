@@ -3,13 +3,14 @@
 require_once realpath ( __DIR__ . '/gitlab/vendor/autoload.php' );
 if (count($argv) < 2 || $argv[1]=='-h' ) {
 	echo "Usage: gf-gitlab.php <token> <command>".PHP_EOL;
-	echo "create <group> <repo>".PHP_EOL;
 	exit(1);
 } else {
 	$strToken = $argv[1];
 	$strCommand = $argv[2];
+	$strDomain = getenv('GF_GITLAB_DOMAIN');
+	$strProtocol = getenv('GF_GITLAB_PROTOCOL');
 
-	$objGitLab = new \Gitlab\Client ( 'http://gitlab.spiralsolutions.co.il/api/v3/' );
+	$objGitLab = new \Gitlab\Client ( $strProtocol.'://'.$strDomain.'/api/v3/' );
 	$objGitLab->authenticate ( $strToken, \Gitlab\Client::AUTH_URL_TOKEN );
 
 	switch ($strCommand) {
@@ -24,8 +25,7 @@ if (count($argv) < 2 || $argv[1]=='-h' ) {
 			$strMergeTitle=$argv[6];
 
 			$intPrjId=0;
-
-			if (preg_match('%.*gitlab\.spiralsolutions\.co\.il[:/]{1}(.*)\.git%im', $strRepoUrl, $regs)) {
+			if (preg_match('%.*'.strtr($strDomain, '.', '\.').'[:/]{1}(.*)\.git%im', $strRepoUrl, $regs)) {
 				$strPrjId = $regs[1];
 			} else {
 				$strPrjId = "";

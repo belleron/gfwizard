@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Functions for operations in use at GIT FLOW wizard
-# Author: Alex Sherman <alexs@spiralsolutions.com>
+# Author: Alex Sherman <alex@belleron.com>
 #
 
 function handleMainMenu() {
@@ -142,7 +142,7 @@ function handleMainMenu() {
 			;;
 		$strOptPhpLintCheck)
 			print_info "PHP Lint check" "Starting..."
-			sp-php_lint_check.sh
+			gf-php_lint_check.sh
 			RETVAL=$?
 			if [ $RETVAL -ne 0 ]; then
 				print_error "PHP Lint check" "Failed. Errors found"
@@ -164,7 +164,7 @@ function handleMainMenu() {
 			doConfirm "doConfig" "Do you want to change settings?" "" "N"
 			;;
 		$strOptDoWizUpdate)
-			doConfirm "sp-install.sh" "Run update script?"
+			doConfirm "gf-install.sh" "Run update script?"
 			;;
 		$strDoHardReset)
 			doConfirm "git reset --hard" "Do hard reset?" ${BRed}"This will reset repository to the last commit."${Color_Off} "N"
@@ -183,8 +183,6 @@ function handleMainMenu() {
 				break 99;
 			fi
 			;;
-
-
     esac
 	pause
     doMainMenu
@@ -244,6 +242,8 @@ function writeConfig() {
 	echo "# Static Lines" >> $CONFIG_FILE
 	echo "# ************" >> $CONFIG_FILE
 	echo "strGFWizardRepo=\"${strGFWizardRepo}\"" >> $CONFIG_FILE
+	echo "export GF_GITLAB_DOMAIN=\"${GF_GITLAB_DOMAIN}\"" >> $CONFIG_FILE
+	echo "export GF_GITLAB_PROTOCOL=\"${GF_GITLAB_PROTOCOL}\"" >> $CONFIG_FILE
 }
 
 function doPreFinishCheck() {

@@ -26,12 +26,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+## Requirements
+1. Bash (Tested on Ubuntu 10.04 / 12.04)
+1. php5-cli (>= 5.3.2)
+
 ## Installation
 1. Clone this repository to a folder included in your PATH ($HOME/bin can be fine, if not used yet)
 1. Copy .gfconfig.dist to .gfconfig and change content according to your environment
 1. Run ./gf-install.sh
 	* It installs the submodules in use
 	* Installs daily cron for the install script itself to track updates automatically
+	* Adds the `gf` alias to `.bashrc`
 1. Restart your shell (logoff - logon / terminal close & open etc.)
 1. use either the `gf` alias or `git gf` command to open the wizard
 
@@ -43,5 +48,4 @@ THE SOFTWARE.
 ## Change Log
 
 ### Version 2.00.00
-* **Feature**: Removed all proprietry code. Set to MIT Licence
-
+* **Restructure**: Removed all proprietry code. Set to MIT Licence. Move to Open Source
