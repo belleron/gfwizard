@@ -1,5 +1,6 @@
 # Git Flow wizard
 This script utilizes the git flow methodology and provides easy text based (BASH) wizard for developers.
+[http://nvie.com/posts/a-successful-git-branching-model/]
 * For some features PHP-CLI is required
 
 #### Versioning
@@ -24,6 +25,20 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+## Installation
+1. Clone this repository to a folder included in your PATH ($HOME/bin can be fine, if not used yet)
+1. Copy .gfconfig.dist to .gfconfig and change content according to your environment
+1. Run ./gf-install.sh
+	* It installs the submodules in use
+	* Installs daily cron for the install script itself to track updates automatically
+1. Restart your shell (logoff - logon / terminal close & open etc.)
+1. use either the `gf` alias or `git gf` command to open the wizard
+
+## Usage
+1. Create folder for your project and cd into it
+1. Run `gf` wizard and init your project
+1. Follow commands / Enjoy ;)
 
 ## Change Log
 
