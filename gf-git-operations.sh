@@ -180,7 +180,7 @@ function handleMainMenu() {
 					printCurrentBranch
 				fi
 		   		echo "Have a nice day."
-				break 99;
+				return 0;
 			fi
 			;;
     esac
